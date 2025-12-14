@@ -1,0 +1,170 @@
+/* Basic Reset and Variables */
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --accent-color: #a82020;
+    --light-color: #f0f0f0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Screen Layout */
+.screen {
+    background: #252525;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Typography and Headings */
+.title {
+    color: var(--accent-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--light-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* Images */
+.screen-image, .question-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #d12c2c;
+    transform: translateY(-1px);
+}
+
+/* Intro Specifics */
+.instructions-box {
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.instructions-box ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Game Screen Specifics */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#timer-box, #question-timer-box {
+    background: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    background-color: #444;
+    color: var(--text-color);
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+.option-btn:hover {
+    background-color: #555;
+}
+
+.option-btn.correct {
+    background-color: #388e3c; /* Green on correct */
+}
+.option-btn.incorrect {
+    background-color: #d32f2f; /* Red on incorrect */
+}
+
+.hint {
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    border-left: 5px solid #ffc107;
+    color: #ffc107;
+    text-align: left;
+    display: none;
+}
+
+/* End Screen Specifics */
+#end-message {
+    color: var(--light-color);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.final-riddle {
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 1.3em;
+    padding: 15px;
+    background: #333;
+    border-radius: 8px;
+    white-space: pre-line; /* Allows line breaks in the text */
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
