@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannibal Island Escape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="background-music" loop></audio>
+
+    <div id="intro-screen" class="screen active">
+        <h1 class="title">Cannibal Island Escape</h1>
+        <img src="img1.jpg" alt="Intro Image" class="screen-image">
+        <div class="instructions-box">
+            <h2>Instructions</h2>
+            <p>Welcome, survivor. You have stumbled upon the legendary Hungry Island. Escape or become the main course!</p>
+            <ul>
+                <li>You have **10 minutes** to answer all 7 questions.</li>
+                <li>You have **10 seconds** to answer *each* question.</li>
+                <li>Choose the **correct option** to proceed.</li>
+                <li>If your answer is incorrect, a **hint** will be provided.</li>
+            </ul>
+        </div>
+        <button id="start-game-btn">Start Escape</button>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div class="header">
+            <div id="timer-box">Time Left: <span id="game-timer">10:00</span></div>
+            <div id="question-timer-box">Answer Time: <span id="question-timer">10</span>s</div>
+        </div>
+
+        <div id="question-container">
+            <h2 id="question-text"></h2>
+            <img id="question-image" src="" alt="Question Image" class="question-image">
+            <div id="options-container" class="options-grid">
+                </div>
+            <p id="hint-text" class="hint"></p>
+        </div>
+    </div>
+
+    <div id="end-screen" class="screen">
+        <h1 id="end-message"></h1>
+        <p class="final-riddle">"Every path upward ends in watching Not moving. I am not the start, But I end all climbs."</p>
+        <button onclick="window.location.reload()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
